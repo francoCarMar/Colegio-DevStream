@@ -31,7 +31,7 @@ public class EstudianteController {
     }
 
     @PostMapping
-    ResponseEntity<Estudiante> createEstudiante(@PathVariable Estudiante estudiante) {
+    ResponseEntity<Estudiante> createEstudiante(@RequestBody Estudiante estudiante) {
         Estudiante est = estudianteService.createEstudiante(estudiante);
         return ResponseEntity.status(HttpStatus.CREATED).body(est);
     }
